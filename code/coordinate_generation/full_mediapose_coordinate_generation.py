@@ -30,12 +30,14 @@ landmark_names = [
 
 # open mp4 video file
 # change to your path:
-video_path = "your_input_path.mp4"
+video_path = "C:/Users/Joerd/Desktop/DSP_stats_in_motion/video_materials/2MST_example_1_edited.mp4"
+#video_path = "your_input_path.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # initialize empty lists for landmark-coordinates and timestamps
 landmarks_data = []
 timestamps = []
+frame_numbers = []
 
 # use openCV to obtain frames per second (fps)
 fps = cap.get(cv2.CAP_PROP_FPS)
@@ -73,6 +75,9 @@ while success:
         # and append data of single frame to landmarks list
         landmarks_data.append(frame_landmarks)
 
+    # store frame number
+    frame_numbers.append(frame_number)
+
     # use fps to compute timestamp per frame
     timestamp = frame_number / fps
     timestamps.append(timestamp)
@@ -98,6 +103,7 @@ df = pd.DataFrame(landmarks_data, columns=landmark_columns)
 # add timestamp and fps to dataframe
 df['timestamp_seconds'] = timestamps
 df['fps'] = fps
+df['frame_number'] = frame_numbers
 
 # standardize the y-coordinates for step tracking into range 0, 1
 landmarks_y = [
@@ -117,7 +123,8 @@ for landmark in landmarks_y:
     df[landmark] = 1 - df[landmark]
 
 # save to csv
-final_csv_path = "your_output_path.csv"
+#final_csv_path = "your_output_path.csv"
+final_csv_path = "C:/Users/Joerd/Desktop/DSP_stats_in_motion/code/working_example_1.csv"
 df.to_csv(final_csv_path, index=False)
 
 # and update status
