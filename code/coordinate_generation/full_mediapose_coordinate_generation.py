@@ -30,8 +30,7 @@ landmark_names = [
 
 # open mp4 video file
 # change to your path:
-video_path = "C:/Users/Joerd/Desktop/DSP_stats_in_motion/video_materials/2MST_example_1_edited.mp4"
-#video_path = "your_input_path.mp4"
+video_path = "your_input_path.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # initialize empty lists for landmark-coordinates and timestamps
@@ -123,9 +122,8 @@ for landmark in landmarks_y:
     df[landmark] = 1 - df[landmark]
 
 # save to csv
-#final_csv_path = "your_output_path.csv"
-final_csv_path = "C:/Users/Joerd/Desktop/DSP_stats_in_motion/code/working_example_1.csv"
+final_csv_path = "your_output_path.csv"
 df.to_csv(final_csv_path, index=False)
 
 # and update status
-print("Data with timestamps and standardized values have been saved to working_example_1.csv")
+print(f"Data with timestamps and standardized values have been saved to {final_csv_path}")
