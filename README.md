@@ -1,6 +1,7 @@
 # Statistics in Motion: A python-based heuristic to analyse the 2 Minute Step Test
 
 Jördis Luisa Strack
+
 A Data Science Project for the M. Sc. Social and Economic Data Science at the University Konstanz
 
 
