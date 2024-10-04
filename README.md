@@ -15,9 +15,10 @@ To answer the call for an autonomous evaluation program of the 2MST, this projec
 
 
 # Heuristic Summary
-![Visualization of the ](code/2MST_analysis/segment_analysis_over_full_data_with_failed_step_attemps.png)
+
 The program allows to process any mp4 file by transforming it into coordinates, applying Gaussian smoothing, and computing velocity to ensure accuracy. It detects valid steps by calculating knee thresholds and ground intervals, while also analyzing cross-body coordination for proper form. Data is segmented into four 30-second intervals to assess performance consistency, particularly for elderly participants, and the results are used to provide individualized feedback.
 
+![Visualization of the ](code/2MST_analysis/segment_analysis_over_full_data_with_failed_step_attemps.png)
 
 # Performance Evaluation
 
