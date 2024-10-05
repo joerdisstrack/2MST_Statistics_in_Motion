@@ -28,8 +28,8 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 # and fps
 fps = cap.get(cv2.CAP_PROP_FPS)
 
-# define output path
-output_path = "C:/Users/Joerd/Desktop/DSP_stats_in_motion/video_materials/2MST_with_skeleton_only.mp4"
+# set output path
+output_path = "your_path"
 
 # set codec for mp4 files
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
